@@ -8,6 +8,29 @@ let operandA = null;
 let operandB = null;
 let result = null;
 
+function operateAll(operandA, userOperator, operandB) {
+  operandA = Number(operandA);
+  operandB = Number(operandB);
+  switch(userOperator) {
+    case "+":
+      result = operandA + operandB;
+      break;
+    case "-":
+      result = operandA - operandB;
+      break;
+    case "*":
+      result = operandA * operandB;
+      break;
+    case "/":
+      if(operandB !== 0) {
+        result = operandA / operandB;
+      } else {
+        alert("Can't divide by zero");
+        clearAll();
+      };
+  };
+};
+
 function clearAll() {
   display.textContent = null;
   userNumber = null;
