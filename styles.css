@@ -41,6 +41,24 @@ body {
     text-align: right;
 }
 
+.buttons {
+    display: flex;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+    background-image: linear-gradient(to bottom right, rgb(37, 70, 37), rgb(8, 22, 7));
+    height: 80%;
+}
+
+button {
+    font-size: x-large;
+}
+
+button:focus {
+    outline: none;
+}
+
 #nums {
     display: flex;
     flex-wrap: wrap;
