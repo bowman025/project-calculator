@@ -31,6 +31,28 @@ function operateAll(operandA, userOperator, operandB) {
   };
 };
 
+function operateNow() {
+  operateAll(operandA, userOperator, operandB);
+  if(result !== null) {
+    result = roundIfNecessary(result, 1).toString();
+    if(result.length < 13) {
+      display.textContent = result;
+    } else {
+      display.textContent = Number.parseFloat(result).toExponential(3).toString();
+    };
+  };
+  userNumber = null;
+  userOperator = null;
+  operandA = result;
+  operandB = null;
+  console.log(`userNumber is ${userNumber}, userOperator is ${userOperator}, operandA is ${operandA}, operandB is ${operandB}, result is ${result}.`)
+};
+
+function roundIfNecessary(number, decimalPlaces) {
+  const roundedNumber = number.toFixed(decimalPlaces);
+  return parseFloat(roundedNumber);
+};
+
 function clearAll() {
   display.textContent = null;
   userNumber = null;
