@@ -22,17 +22,14 @@ function determineUserInput() {
       userNumber = null;
       userOperator = userInput;
       display.textContent = userOperator;
-      console.log(`The input is an operator: ${userOperator}`);
       };
   } else if(["Enter", "="].includes(userInput)) {
     if(operandA !== null && userOperator !== null && operandB !== null) {
       operateNow();
     } else if(userNumber !== null) {
       display.textContent = userNumber;
-      console.log(`This input is Enter or =`);
     } else if(result !== null) {
       display.textContent = result;
-      console.log(`This input is Enter or =`);
     } else if(userOperator !== null) {
       display.textContent = userOperator;
     } else return;
@@ -64,7 +61,6 @@ function determineUserNumber() {
     userNumber = "0" + userNumber;
     display.textContent = userNumber;
   } else display.textContent = userNumber;
-  console.log(`This input is a number: ${userNumber}`);
 };
 
 function determineOperands() {
@@ -88,8 +84,6 @@ function determineOperands() {
     operandA = null;
     operandB = null;
   };
-  console.log(`Operand A: ${operandA} and the Operator: ${userOperator}`);
-  console.log(`Operand B: ${operandB} and the Operator: ${userOperator}`);
 };
 
 function operateAll(operandA, userOperator, operandB) {
@@ -129,7 +123,6 @@ function operateNow() {
   userOperator = null;
   operandA = result;
   operandB = null;
-  console.log(`userNumber is ${userNumber}, userOperator is ${userOperator}, operandA is ${operandA}, operandB is ${operandB}, result is ${result}.`)
 };
 
 function roundIfNecessary(number, decimalPlaces) {
