@@ -86,3 +86,54 @@ button:focus {
     padding: 10px;
     flex-direction: column;
 }
+
+.operators,
+#clear,
+#equals {
+    height: 20%;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.numbers,
+.operators,
+#point {
+    background-image: linear-gradient(to bottom right, rgb(70, 122, 122), rgb(33, 56, 56));
+    color: aliceblue;
+}
+
+.numbers:hover,
+.operators:hover,
+#point:hover {
+    transform: scale(1.1);
+}
+
+.numbers:active,
+.operators:active
+#point:active {
+    background-image: linear-gradient(to bottom right, rgb(33, 56, 56), rgb(18, 34, 34));
+}
+
+#point:disabled,
+.numbers:disabled {
+    background-color: darkslategray;
+}
+
+#equals,
+#clear,
+#delete {
+    background-color: rgb(163, 199, 199);
+}
+
+#equals:hover,
+#clear:hover,
+#delete:hover {
+    background-color: rgb(112, 148, 148);
+}
+
+#equals:active,
+#clear:active,
+#delete:active {
+    background-color: rgb(91, 124, 124);
+}
