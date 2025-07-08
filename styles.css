@@ -1,0 +1,70 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  height: 100vh;
+  width: 100wv;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(rgb(67, 73, 69), rgb(37, 41, 38));
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgb(103, 138, 105), rgb(26, 68, 26));
+    box-shadow: 20px 20px 20px;
+}
+
+#display {
+    width: 350px;
+    height: 100px;
+    padding-right: 20px;
+    padding-top: 15px;
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+    background-image: linear-gradient(to bottom right, rgb(255, 206, 100), rgb(255, 155, 5));
+    font-size: 48px;
+    text-align: right;
+}
+
+#nums {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding: 10px;
+    margin-left: -15px;
+    width: 85%;
+}
+
+.numbers,
+#point {
+    width: 31%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#delete {
+    width: 31%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#funcs {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
